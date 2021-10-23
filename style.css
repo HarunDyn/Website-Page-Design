@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  border-bottom: 1px solid white;
+  background-color: black;
+}
+
+.logo-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-main img {
+  width: 5rem;
+  max-height: 3rem;
+}
+#iki {
+  border: 1px solid gray;
+  border-radius: 0.3rem;
+  margin-right: 0.1rem;
+  background-color: black;
+  color: white;
+  padding: 0.1rem 0.2rem;
+}
+
+#bir {
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  margin-right: 0.1rem;
+  background-color: white;
+  color: black;
+  padding: 0.1rem 0.2rem;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+#nav-bar ul li {
+  margin-right: 1rem;
+  list-style-type: none;
+}
+
+#nav-bar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.banner {
+  background-image: url(./images/showcas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 54vh;
+}
+
+.banner div {
+  min-height: 54vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.banner div h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner div p {
+  font-size: 1rem;
+  color: white;
+}
+
+#subscribe {
+  min-height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(221, 219, 219);
+  position: sticky;
+  top: 8vh;
+}
+
+#subscribe h3 {
+  margin-left: 1rem;
+}
+
+#subscribe input {
+  border: none;
+  padding: 0.2rem;
+}
+#subscribe button {
+  margin: 0 0.5rem;
+  color: white;
+  padding: 0.3rem;
+  background-color: black;
+}
+
+#parts {
+  display: flex;
+  min-height: 30vh;
+}
+.box {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box img {
+  width: 4rem;
+  margin-bottom: 0.7rem;
+}
+
+.box h4 {
+  margin-bottom: 0.4rem;
+}
+.box p {
+  text-align: center;
+}
+
+#aboutUs {
+  min-height: 80vh;
+  display: flex;
+}
+
+#aboutUs h4 {
+  margin-left: 0.5rem;
+}
+#aboutUs #p1 {
+  width: 60vw;
+  text-align: justify;
+  margin: 0.5rem 2rem 1rem 0.5rem;
+  padding: 1rem;
+}
+#aboutUs #p2 {
+  width: 60vw;
+  text-align: justify;
+  margin: 0.5rem 2rem 1rem 0.5rem;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+#aboutUs #p3 {
+  border: 1px solid black;
+  height: 20rem;
+  background-color: black;
+  color: white;
+  margin: 1rem;
+  padding: 1rem;
+}
+#aboutUs #p3 h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#aboutUs #p3 p {
+  text-align: justify;
+}
+footer {
+  width: 100vw;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid white;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  position: fixed;
+}
+
+footer p {
+  margin-bottom: 0.4rem;
+}
