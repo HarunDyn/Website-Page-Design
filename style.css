@@ -5,23 +5,25 @@
 }
 
 header {
-  width: 100vw;
   height: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid white;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
-.logo-main {
+#logo-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo-main img {
+#logo-main img {
   width: 5rem;
   max-height: 3rem;
 }
@@ -29,13 +31,13 @@ header {
   border: 1px solid gray;
   border-radius: 0.3rem;
   margin-right: 0.1rem;
-  background-color: black;
+  background-color: rgb(34, 33, 33);
   color: white;
   padding: 0.1rem 0.2rem;
 }
 
 #bir {
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 0.3rem;
   margin-right: 0.1rem;
   background-color: white;
@@ -61,30 +63,28 @@ header {
 }
 
 .banner {
-  background-image: url(./images/showcas.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(./images/banner3.jpg);
   background-attachment: fixed;
-  min-height: 54vh;
+  min-height: 46vh;
 }
 
-.banner div {
-  min-height: 54vh;
+.banner .banner-p {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: black;
 }
 
-.banner div h1 {
+.banner .banner-p h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 
-.banner div p {
+.banner .banner-p p {
   font-size: 1rem;
-  color: white;
+  color: black;
+  font-weight: 600;
 }
 
 #subscribe {
@@ -95,6 +95,8 @@ header {
   background-color: rgb(221, 219, 219);
   position: sticky;
   top: 8vh;
+  right: 0;
+  left: 0;
 }
 
 #subscribe h3 {
@@ -107,14 +109,20 @@ header {
 }
 #subscribe button {
   margin: 0 0.5rem;
+  margin-right: 2rem;
   color: white;
   padding: 0.3rem;
   background-color: black;
 }
 
+#subscribe button:hover {
+  background-color: rgb(63, 61, 61);
+}
+
 #parts {
+  width: 100vw;
   display: flex;
-  min-height: 30vh;
+  min-height: 25vh;
 }
 .box {
   margin: 1rem;
@@ -135,14 +143,15 @@ header {
   text-align: center;
 }
 
-#aboutUs {
-  min-height: 80vh;
+.aboutUs {
   display: flex;
 }
 
 #aboutUs h4 {
-  margin-left: 0.5rem;
+  margin-top: 1rem;
+  margin-left: 1.2rem;
 }
+
 #aboutUs #p1 {
   width: 60vw;
   text-align: justify;
@@ -159,7 +168,7 @@ header {
 }
 #aboutUs #p3 {
   border: 1px solid black;
-  height: 20rem;
+  min-height: 20rem;
   background-color: black;
   color: white;
   margin: 1rem;
@@ -172,19 +181,186 @@ header {
 #aboutUs #p3 p {
   text-align: justify;
 }
+
+#services {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.services {
+  display: flex;
+}
+
+h4 {
+  margin-left: 2rem;
+}
+.box-service {
+  padding: 1rem;
+  width: 60vw;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  background-color: burlywood;
+}
+
+.box-service h5 {
+  margin-bottom: 0.5rem;
+}
+.box-service p {
+  margin-bottom: 0.5rem;
+}
+.form {
+  width: 25vw;
+  background-color: black;
+  margin-left: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+#h-form {
+  margin-bottom: 0.5rem;
+}
+#form #text {
+  margin-bottom: 1rem;
+}
+#form #email {
+  margin-bottom: 1rem;
+}
+#form #textarea {
+  margin-bottom: 1rem;
+  resize: none;
+}
+
+#form button {
+  width: 40%;
+  color: black;
+  background-color: white;
+}
+
 footer {
-  width: 100vw;
-  min-height: 8vh;
+  border-top: 1px solid white;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid white;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  position: fixed;
 }
 
 footer p {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 678px) {
+  .services {
+    flex-direction: column;
+  }
+
+  .box-service {
+    width: 90vw;
+    margin-right: 5vw;
+  }
+
+  .form {
+    width: 90vw;
+    background-color: black;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 10vh;
+  }
+
+  #h-form {
+    margin-bottom: 0.5rem;
+  }
+  #form #text {
+    margin-bottom: 1rem;
+  }
+  #form #email {
+    margin-bottom: 1rem;
+  }
+  #form #textarea {
+    margin-bottom: 1rem;
+    resize: none;
+  }
+
+  #form button {
+    width: 40%;
+    color: black;
+    background-color: white;
+  }
+}
+@media (max-width: 567px) {
+  header img {
+    display: none;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  #logo-main {
+    margin-top: 0.7rem;
+  }
+  .banner {
+    min-height: 30vh;
+  }
+
+  .banner .banner-p h1 {
+    font-size: 2rem;
+  }
+
+  .banner .banner-p p {
+    display: none;
+  }
+
+  #subscribe div {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  #subscribe div input {
+    margin-bottom: 0.5rem;
+  }
+
+  #subscribe h3 {
+    text-align: center;
+    margin-right: 1rem;
+  }
+
+  .aboutUs {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  #aboutUs #p1 {
+    width: 90vw;
+    margin: auto;
+  }
+  #aboutUs #p2 {
+    width: 90vw;
+    margin: auto;
+  }
+  #aboutUs #p3 {
+    width: 90vw;
+    margin: auto;
+    margin-top: 1rem;
+    min-height: 5rem;
+    padding: 1rem;
+    margin-bottom: 10vh;
+  }
+  #aboutUs #p3 h4 {
+    margin-top: 0.1rem;
+  }
 }
